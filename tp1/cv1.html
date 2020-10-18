@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>TP1</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <!-- Place favicon.ico in the root directory -->
+
+<html>
+<!--Titre de la page-->
+
+<head>
+  <title>Mon cv </title>
+</head>
+<!--Contenu de la page-->
+
+<body>
+  <!--Header de la page-->
+  <div id="header">
+    <table>
+      <tbody>
+        <tr>
+          <td> Nom et Prénom: DOUANE Anis </td>
+          <td> Marié  </td>
+        </tr>
+        <tr>
+          <td> Adresse: Calle Sierra Maigmo 5 PO4 1-Alicante </td>
+          <td> Permis B</td>
+        </tr>
+        
+        <tr>
+          <td>Mobile: 0641156231 </td>
+          <td>  </td>
+        </tr>
+        <tr>
+          <td>E mail: anis.douane@outlook.fr </td>
+          <td>  </td>
+        </tr>
+    
+      </tbody>
+    </table>
+  </div>
+  <p class="myTitle">Ingéineur d'étude et développement </p>
+
+
+  <p class="MySectionTitle">Formation</p>
+  <div id="section">
+
+    <table>
+      <tbody>
+        <tr>
+          <td>2020/2021</td> <h2>  
+           <td> <a href="formation.html">Master 3IR</a> à l'Université Sorbonne Paris Nord</td>
+        </tr>
+    
+        <tr>
+          <td>2019/2020 </td>
+          <td>Master En Ingénierie Des Télécommunications à <a href="formation.html"> l'Université d'Alicante</td>
+        </tr>
+        <tr>
+          <td>2018/2019</td>
+          <td>Master En Systèmes Des Télécommunications </td>
+        </tr>
+         </tbody>
+    </table>
+  </div>
+
+        <p class="MySectionTitle">Expériences</p>
+  <div id="section">
+
+    <table>
+      <tbody>
+
+        <tr>
+          <td>2018</td>
+          <td>Stage pratique chez Algérie Télécom <img src="image2.jpg" alt="alg" class="img"> </td> 
+        </tr>
+        
+        <tr>
+          <td>2017</td>
+          <td>Stage pratique chez Ooredoo <img src="image3.jpg" alt="Ooredoo" class="img"> </td>
+        </tr>
+        <tr>
+          <td>2016</td>
+          <td>Stage pratique chez Mobilis  <img src="image4.jpg" alt="Mobilis" class="img" >  </td> 
+        </tr>
+         </tbody>
+    </table>
+  </div>
+
+        <p class="MySectionTitle">Compétences</p>
+  <div id="section">
+
+    <table>
+      <tbody>
+
+        <tr>
+          <td>Systèmes des Télécommunications</td>
+          <td>GSM, UMTS, LTE </td>
+        </tr>
+
+        <tr>
+          <td>Téchnologies de Transmissions </td>
+          <td>PDH, SDH, DWDM, Faisceau Hertzien, Fibre optique</td>
+        </tr>
+        <tr>
+          <td>Réseaux Informatique</td>
+          <td>TCP/IP, VLAN, CCNA</td>
+        </tr>
+         </tbody>
+    </table>
+  </div>
+
+          <p class="MySectionTitle">Centres d'intérets</p>
+  <div id="section">
+
+    <table>
+      <tbody>
+        
+        <tr>
+          <td>Sport</td>
+          <td>Football , Volley-ball</td>
+        </tr>
+    
+        <tr>
+          <td>Culture </td>
+          <td>Cinéma</td>
+        </tr>
+        <tr>
+          <td>Voyages</td>
+          <td>Island, Espagne</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+
+  <!--le pied de la page-->
+  <div id="footer"></div>
+</body>
+
+</html>
+
+<style>
+
+
+  /*Css pour toutes <table>*/
+  table {
+    /*prendre toute la largeur de la page*/
+    width: 50%;
+    /*la bordure de tout le header*/
+    border: solid 2px;
+    /*Laisser une marge en haut de 50px, bas , gauche droit : laisser la marge par défaut*/
+    margin: 50px auto;
+
+        
+       
+
+     
+      
+  }
+
+  tr {
+    /*couleur de fond d'une ligne dans la table*/
+    background: #eee;
+  }
+
+  td {
+    /*pour laisser 10px entre le text et la bordure*/
+    padding: 10px;
+    /*bordure de la ligne de la table*/
+    border: 2px solid #000;
+    /*taille de text*/
+    font-size: 15px;
+    /*aligner le text à gauche*/
+    text-align: left;
+  }
+
+  /*Appliquer le css uniquement à tout les fils de la balise div dont id = header*/
+  #header td:first-child {
+    /*prendre 60% de la page à gauche et 40 à droite*/
+    width: 60%;
+  }
+
+  .myTitle {
+    display: block;
+    /*Taile de text */
+    font-size: 2em;
+    /*mettre en gras*/
+    font-weight: bold;
+    /*mettre au centre*/
+    text-align: center;
+  }
+
+  .MySectionTitle {
+    display: block;
+    /*Taile de text */
+    font-size: 2em;
+    /*mettre en gras*/
+    font-weight: bold;
+    /*mettre au à gauche*/
+    /*text-align:left ;*/
+     text-indent: 390px; 
+
+}
+ 
+  
+
+  #section td:first-child {
+    /*prendre 10% de la page à gauche et le à droite pour le premier fils td*/
+    width: 10%;
+  }
+</style>
