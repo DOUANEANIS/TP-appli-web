@@ -11,24 +11,24 @@
     <!-- Place favicon.ico in the root directory -->
 
 <html>
-<!--Titre de la page-->
+
 
 <head>
   <title>Mon cv </title>
 </head>
-<!--Contenu de la page-->
+
 
 <body>
-  <!--Header de la page-->
+  
   <div id="header">
     <table>
       <tbody>
         <tr>
           <td> Nom et Prénom: DOUANE Anis </td>
-          <td> Marié  </td>
+          <td> Célibataire  </td>
         </tr>
         <tr>
-          <td> Adresse: Calle Sierra Maigmo 5 PO4 1-Alicante </td>
+          <td> Adresse: Saint Germain En Laye</td>
           <td> Permis B</td>
         </tr>
         
@@ -44,10 +44,10 @@
       </tbody>
     </table>
   </div>
-  <p class="myTitle">Ingéineur d'étude et développement </p>
+  <i><p class="myTitle">Ingéineur d'étude et développement </p> </i>
 
 
-  <p class="MySectionTitle">Formation</p>
+  <i><p class="MySectionTitle">Formation</p> </i>
   <div id="section">
 
     <table>
@@ -69,7 +69,7 @@
     </table>
   </div>
 
-        <p class="MySectionTitle">Expériences</p>
+        <i><p class="MySectionTitle">Expériences</p></i>
   <div id="section">
 
     <table>
@@ -92,7 +92,7 @@
     </table>
   </div>
 
-        <p class="MySectionTitle">Compétences</p>
+       <i> <p class="MySectionTitle">Compétences</p></i>
   <div id="section">
 
     <table>
@@ -115,7 +115,7 @@
     </table>
   </div>
 
-          <p class="MySectionTitle">Centres d'intérets</p>
+          <i><p class="MySectionTitle">Centres d'intérets</p></i>
   <div id="section">
 
     <table>
@@ -139,7 +139,7 @@
     </table>
   </div>
 
-  <!--le pied de la page-->
+  
   <div id="footer"></div>
 </body>
 
@@ -150,19 +150,20 @@
 <style>
  body {
  width:80%;
- box-shadow: 6px 6px 30px 13px #9e9eb5;
+ box-shadow: 6px 6px 30px 13px #02010e;
  padding-left: 40px;
  margin:auto;
  padding:15px;
+ background: #170c2b6e;
 }
 
-  /*Css pour toutes <table>*/
+  
   table {
-    /*prendre toute la largeur de la page*/
+    
     width: 100%;
-    /*la bordure de tout le header*/
+    
     border: solid 2px;
-    /*Laisser une marge en haut de 50px, bas , gauche droit : laisser la marge par défaut*/
+    
     margin: 50px auto;
 
       
@@ -172,45 +173,45 @@
 
 
   tr {
-    /*couleur de fond d'une ligne dans la table*/
+    
     background: #eee;
   }
 
   td {
-    /*pour laisser 10px entre le text et la bordure*/
+    
     padding: 10px;
-    /*bordure de la ligne de la table*/
+    
     border: 2px solid #000;
-    /*taille de text*/
+
     font-size: 15px;
-    /*aligner le text à gauche*/
+    
     text-align: left;
   }
 
-  /*Appliquer le css uniquement à tout les fils de la balise div dont id = header*/
+  
   #header td:first-child {
-    /*prendre 60% de la page à gauche et 40 à droite*/
+    
     width: 60%;
   }
 
   .myTitle {
     display: block;
-    /*Taile de text */
+    
     font-size: 2em;
-    /*mettre en gras*/
+    
     font-weight: bold;
-    /*mettre au centre*/
+    
     text-align: center;
   }
 
   .MySectionTitle {
     display: block;
-    /*Taile de text */
+    
     font-size: 2em;
-    /*mettre en gras*/
+    
     font-weight: bold;
-    /*mettre au à gauche*/
-    /*text-align:left ;*/
+    
+
      text-indent: 15px; 
 
 }
@@ -218,7 +219,7 @@
   
 
   #section td:first-child {
-    /*prendre 10% de la page à gauche et le à droite pour le premier fils td*/
+    
     width: 10%;
   }
   .img{
