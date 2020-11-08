@@ -11,23 +11,90 @@
         <!-- Place favicon.ico in the root directory -->
 
         <style>
-          body{
-              background-color: #e9ebee;              
-              font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-              font-size: 16px;
-              margin: 0 auto;
-              max-width: 800px;              
-          }
+           
+
+            
+            
+         
+            body{
+              background-image: url(img.jpg) ;             
+              font-family: Verdana, Geneva, Tahoma, sans-serif ;
+              margin:0;
+              padding: 0;
+              -webkit-box-size:cover;
+              background-size: cover;
+             }
+             form{
+                position: absolute;
+                top: 45%;
+                left:50% ;
+                transform: translate(-50%, -50%);
+                
+                box-sizing: border-box;
+                background-color: rgb(195, 201, 200);
+                padding: 100px;
+                border-radius: 30px;
+            }
+            table{
+                
+                padding: 50px;
+                height: 50px;
+
+
+
+
+
+
+
+            }
+             }
+ 
+           
+
+
+
+
+           
+    
         </style>
         
         <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
         <!--<link rel="stylesheet" href="style.css">-->
         <!--<script src="js/main.js"></script>-->
     </head>
-    <body>        
-        <h1>tp2</h1>
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
-    </body>
+     <body>  
+        <form >     
+         <table>
+               <tr>
+                    <td><label>Nom</label><span>*</span></td>
+                    <td><input type="text" placeholder="saisir votre Nom" name=" Nom" minlength="5" maxlength="15" required></td>
+              </tr>
+               <tr>
+                    <td><label>Prénom</label><span>*</span></td>
+                    <td><input type="text" placeholder="saisir votre Prénom " name="Prénom" required></td>   
+             </tr>
+              <tr>
+                    <td><label>Date de naissance</label><span>*</span></td>
+                    <td><input type="date" placeholder="JJ/MM/aaaa" name="date" required></td>
+             </tr>
+              <tr>
+                    <td><label>Adresse</label><span>*</span></td>
+                    <td><input type="text" placeholder="saisir votre Adresse" name="Adresse" required></td>
+              </tr>
+               <tr>
+                    <td><label>Email</label><span>*</span></td>
+                    <td><input type="email" placeholder="saisir votre E mail" name="Email" required></td>
+                </tr>
+                <tr>
+                    <td><label></label></td>
+                    <td><button type="submit" >Valider</button></td>
+                </tr>
+
+         </table>
+     </form> 
+     <div id="resultat" name="resultat">
+        <p class="txt" id="txt"></p>
+    
+</div> 
+</body>
 </html>
