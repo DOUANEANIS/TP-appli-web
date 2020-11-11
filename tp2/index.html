@@ -10,84 +10,54 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <style>
-           
-
-            
-            
-         
-            body{
-              background-image: url(img.jpg) ;             
-              font-family: Verdana, Geneva, Tahoma, sans-serif ;
-              margin:0;
-              padding: 0;
-              -webkit-box-size:cover;
-              background-size: cover;
-             }
-             form{
-                position: absolute;
-                top: 45%;
-                left:50% ;
-                transform: translate(-50%, -50%);
-                
-                box-sizing: border-box;
-                background-color: rgb(195, 201, 200);
-                padding: 100px;
-                border-radius: 30px;
-            }
-            table{
-                
-                padding: 50px;
-                height: 50px;
-
-
-
-
-
-
-
-            }
-             }
- 
-           
-
-
-
-
-           
-    
-        </style>
+        
         
         <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-        <!--<link rel="stylesheet" href="style.css">-->
+    <link rel="stylesheet" href="style.css">
         <!--<script src="js/main.js"></script>-->
     </head>
      <body>  
         <form >     
-         <table>
+         <table> 
+
+             <p>Inscription</p>
+
+            
                <tr>
-                    <td><label>Nom</label><span>*</span></td>
-                    <td><input type="text" placeholder="saisir votre Nom" name=" Nom" minlength="5" maxlength="15" required></td>
-              </tr>
+                    <td><label for="Nom">Nom</label><span>*</span></td>
+                   <td><input type="text" placeholder="saisir votre Nom" name=" Nom" id="Nom" minlength="5" maxlength="20" ></td>
+                   <td> <label class="grid-item" id="error1" ></label></td>
+                </tr>
+
                <tr>
-                    <td><label>Prénom</label><span>*</span></td>
-                    <td><input type="text" placeholder="saisir votre Prénom " name="Prénom" required></td>   
-             </tr>
+                    <td><label for="Prénom">Prénom</label><span>*</span></td>
+                    <td><input type="text" placeholder="saisir votre Prénom " name="Prénom" id="Prénom"  minlength="5" maxlength="20"  ></td>   
+                    <td> <label class="grid-item" id="error2" ></label></td>
+
+                </tr>
               <tr>
-                    <td><label>Date de naissance</label><span>*</span></td>
-                    <td><input type="date" placeholder="JJ/MM/aaaa" name="date" required></td>
-             </tr>
+                    <td><label for="Date_de_naissance">Date de naissance</label><span>*</span></td>
+                    <td><input type="date"  name="date" id="Date_de_naissance" ></td>
+                    <td> <label class="grid-item" id="error3" ></label></td>
+
+                </tr>
               <tr>
-                    <td><label>Adresse</label><span>*</span></td>
-                    <td><input type="text" placeholder="saisir votre Adresse" name="Adresse" required></td>
-              </tr>
+                    <td><label for="Adresse">Adresse</label><span>*</span></td>
+                    <td><input type="text" placeholder="saisir votre Adresse" name="Adresse" id="Adresse"  minlength="5" maxlength="50" ></td>
+                    <td> <label class="grid-item" id="error4" ></label></td>
+
+                </tr>
                <tr>
-                    <td><label>Email</label><span>*</span></td>
-                    <td><input type="email" placeholder="saisir votre E mail" name="Email" required></td>
+                    <td><label for="Email">Email</label><span>*</span></td>
+                    <td><input type="email" placeholder="saisir votre E mail" name="Email" id="Email"   minlength="5" maxlength="30" ></td>
+                    <td> <label class="grid-item" id="error5" ></label></td>
+
                 </tr>
                 <tr>
                     <td><label></label></td>
-                    <td><button type="submit" >Valider</button></td>
+                    <td><div class="grid-item" ><input type="button" value="Valider" onclick="validation()" >  </div></td>
+
+             <!--   //   <td><button type="submit" value="valider" onclick="validation()></button></td>-->
                 </tr>
 
          </table>
@@ -98,3 +68,60 @@
 </div> 
 </body>
 </html>
+
+<script>
+
+
+function validation(){
+    var Nom=document.getElementById("Nom").value.length;
+    var Prénom=document.getElementById("Prénom").value.length;
+    var Date_de_naissance=document.getElementById("Date_de_naissance").value.length;
+    var Adresse=document.getElementById("Adresse").value.length;
+    var Email =document.getElementById("Email").value.length;
+
+    if( validateItem("Nom", "error1")    && 
+        validateItem("Prénom", "error2") &&
+        validateItem("Date_de_naissance","error3")&&
+        validateItem("Adresse","error4")  &&
+        validateItem("Email","error5") )
+    {
+
+        var d= document.querySelector("#resultat");
+        d.style.backgroundColor='green';
+        d.style.padding='5px';
+        d.style.color="#e9ebee";
+        d.innerHTML="Bienvenue"+" "+document.querySelector("#Prénom").value; 
+    }
+  
+    function validateItem(_id,_idError){
+        var el = document.querySelector("#"+_id);
+        var label = document.querySelector('[for="'+_id+'"]');
+        var error= document.querySelector("#"+_idError);
+        var d1= document.querySelector("#resultat");
+
+        if (el.value.length<5) { 
+        
+            d1.innerHTML="";
+            d1.style.backgroundColor="#e9ebee"
+            error.style.backgroundColor="#ea05056e";
+            error.style.padding='5px';
+            error.style.border='1px black';
+
+            error.innerHTML="Le "+ label.textContent +" doit contenir au moins 5 caractères ! ";
+            return false;
+        } 
+        else { 
+            
+           error.style.backgroundColor=" #e9ebee";
+           error.innerHTML="";
+           return true;
+        }
+    
+    }
+}
+
+
+
+
+
+</script>
