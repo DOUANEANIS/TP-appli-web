@@ -14,114 +14,73 @@
         
         <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
     <link rel="stylesheet" href="style.css">
-        <!--<script src="js/main.js"></script>-->
+        <script src="js/main.js"></script>
     </head>
-     <body>  
-        <form >     
-         <table> 
-
-             <p>Inscription</p>
-
-            
-               <tr>
-                    <td><label for="Nom">Nom</label><span>*</span></td>
-                   <td><input type="text" placeholder="saisir votre Nom" name=" Nom" id="Nom" minlength="5" maxlength="20" ></td>
-                   <td> <label class="grid-item" id="error1" ></label></td>
-                </tr>
-
-               <tr>
-                    <td><label for="Prénom">Prénom</label><span>*</span></td>
-                    <td><input type="text" placeholder="saisir votre Prénom " name="Prénom" id="Prénom"  minlength="5" maxlength="20"  ></td>   
-                    <td> <label class="grid-item" id="error2" ></label></td>
-
-                </tr>
-              <tr>
-                    <td><label for="Date_de_naissance">Date de naissance</label><span>*</span></td>
-                    <td><input type="date"  name="date" id="Date_de_naissance" ></td>
-                    <td> <label class="grid-item" id="error3" ></label></td>
-
-                </tr>
-              <tr>
-                    <td><label for="Adresse">Adresse</label><span>*</span></td>
-                    <td><input type="text" placeholder="saisir votre Adresse" name="Adresse" id="Adresse"  minlength="5" maxlength="50" ></td>
-                    <td> <label class="grid-item" id="error4" ></label></td>
-
-                </tr>
-               <tr>
-                    <td><label for="Email">Email</label><span>*</span></td>
-                    <td><input type="email" placeholder="saisir votre E mail" name="Email" id="Email"   minlength="5" maxlength="30" ></td>
-                    <td> <label class="grid-item" id="error5" ></label></td>
-
-                </tr>
-                <tr>
-                    <td><label></label></td>
-                    <td><div class="grid-item" ><input type="button" value="Valider" onclick="validation()" >  </div></td>
-
-             <!--   //   <td><button type="submit" value="valider" onclick="validation()></button></td>-->
-                </tr>
-
-         </table>
-     </form> 
-     <div id="resultat" name="resultat">
-        <p class="txt" id="txt"></p>
+      <body>
+        <div id="form-outer">
+            <p id="resultat"></p>
+            <form id="survey-form">
     
-</div> 
-</body>
-</html>
-
-<script>
-
-
-function validation(){
-    var Nom=document.getElementById("Nom").value.length;
-    var Prénom=document.getElementById("Prénom").value.length;
-    var Date_de_naissance=document.getElementById("Date_de_naissance").value.length;
-    var Adresse=document.getElementById("Adresse").value.length;
-    var Email =document.getElementById("Email").value.length;
-
-    if( validateItem("Nom", "error1")    && 
-        validateItem("Prénom", "error2") &&
-        validateItem("Date_de_naissance","error3")&&
-        validateItem("Adresse","error4")  &&
-        validateItem("Email","error5") )
-    {
-
-        var d= document.querySelector("#resultat");
-        d.style.backgroundColor='green';
-        d.style.padding='5px';
-        d.style.color="#e9ebee";
-        d.innerHTML="Bienvenue"+" "+document.querySelector("#Prénom").value; 
-    }
-  
-    function validateItem(_id,_idError){
-        var el = document.querySelector("#"+_id);
-        var label = document.querySelector('[for="'+_id+'"]');
-        var error= document.querySelector("#"+_idError);
-        var d1= document.querySelector("#resultat");
-
-        if (el.value.length<5) { 
-        
-            d1.innerHTML="";
-            d1.style.backgroundColor="#e9ebee"
-            error.style.backgroundColor="#ea05056e";
-            error.style.padding='5px';
-            error.style.border='1px black';
-
-            error.innerHTML="Le "+ label.textContent +" doit contenir au moins 5 caractères ! ";
-            return false;
-        } 
-        else { 
-            
-           error.style.backgroundColor=" #e9ebee";
-           error.innerHTML="";
-           return true;
-        }
+                  <!--Bloc à copié -->
+                <div class="rowTab"> 
+                    <div class="labels"><!-- demande de nom -->
+              <!--On ajout le for pour lié le label à l input-->
+                        <label id="nom-label" for="nom"> Nom* :</label>
+                    </div>
+                    <div class="rightTab">
+                        <input type="text" name="nom" id="nom" class="input-field" placeholder=" Saisir Votre Nom" >
+                    </div>
+                </div>
+                
+                <div class="rowTab"> 
+                    <div class="labels"><!-- demande de nom -->
+              <!--On ajout le for pour lié le label à l input-->
+                        <label id="prenom-label" for="prenom"> Prenom* :</label>
+                    </div>
+                    <div class="rightTab">
+                        <input type="text" name="prenom" id="prenom" class="input-field" placeholder="Saisir Votre Prenom" >
+                    </div>
+                </div>
     
-    }
-}
+                <div class="rowTab">
+                    <div class="labels">
+                        <label id="date de naissance-label" for="date de naissance"> Date de naissance* :</label>
+                    </div>
+                    <div class="rightTab">
+                        <input type="date" name="date de naissance" id="date de naissance" class="input-field">
+    
+                    </div>
+                    
+                </div>
+                <div class="rowTab">
+                    <div class="labels">
+                        <label id="adresse-label" for="adresse" >Adresse* :</label>
+                    </div>
+                    <div class="rightTab">
+                        <input type="text" name="adresse" id="adresse" class="input-field" placeholder="Saisir Votre Adresse">	
+                    </div>
+                </div>
+    
+                <div class="rowTab">
+                    <div class="labels">
+                        <label id="email-label" for="email"> Email* :</label>
+                    </div>
+                    <div class="rightTab">
+                        <input type="text" name="email" id="email" class="input-field " placeholder="Saisir Votre Email">
+                    </div>
+                    
+                </div>
+    
+                
+          
+            </form>
+    
+            <button id="submit" type="button" onclick="validation()">Valider</button>
+    
+                <p id="erreur"></p>
+        </div>
+        </body>
+    </html>
+   
 
 
-
-
-
-</script>
