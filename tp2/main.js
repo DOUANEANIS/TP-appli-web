@@ -3,14 +3,26 @@
 function validation(){
     var nom=document.getElementById("nom").value.length;
     var prenom=document.getElementById("prenom").value.length;
+    var date_de_naissance=document.getElementById("date_de_naissance").value.length ;
 
-    if( validateItem("nom") && validateItem("prenom"))
+    var adresse=document.getElementById("adresse").value.length;
+    var email=document.getElementById("email").value.length;
+
+    if( validateItem("nom") && 
+        validateItem("prenom") &&
+        validateItem("date_de_naissance") &&
+
+        validateItem("adresse") &&
+        validateItem("email")
+    
+    )
     {
         var d= document.querySelector("#resultat");
         d.style.backgroundColor='green';
         d.style.padding='5px';
         d.style.color="#e9ebee";
-        d.innerHTML="Bienvenue"+" "+document.getElementById("prenom").value; 
+        d.innerHTML="Bienvenue"+" "+document.getElementById("prenom").value;
+        
     }
   
     function validateItem(_id){
