@@ -17,10 +17,10 @@ $(document).ready(function () {
         $('#myModal').modal('show');
       }
 
-      
+
       else {
         $(".modal-title").text("Message d'erreur ");
-        $(".modal-body").html("<p>Veuillez remplir tous champs svp.</p>");
+        $(".modal-body").html("<p>Veuillez remplir tous les champs svp.</p>");
         $('#myModal').modal('show');
       }
       
