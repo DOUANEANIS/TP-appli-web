@@ -1,5 +1,7 @@
 <!doctype html>
 <html>
+
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -9,104 +11,94 @@
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
-        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-        <!--<link rel="stylesheet" href="style.css">-->
-        <!--<script src="main.js"></script>-->
-        <!-- jquery pour pouvoir utiliser les composants JS de boostap (modal, tooltip...) -->
-         <script src="js/jquery-3.2.1.slim.min.js"></script>
+        <!--********************************************************--> 
+        <script src="js/jquery-3.2.1.slim.min.js"></script>
 
-        <!-- CSS boostrap -->
         <link rel="stylesheet" href="css/bootstrap.min.css">
-
         <script src="js/popper.min.js"></script>
-
-        <!-- composants JS de boostrap (modal http://getbootstrap.com/docs/4.0/components/modal/ , collapse...) -->
         <script src="js/bootstrap.min.js"></script>
-    </head>
-    <header>
+        <script src="js/form-jquery-validation.js"></script>
+        
+        
+  <style>
+  html,body
+	{
+    background-color: #b8a19e;
+		text-align: auto ;}
+  header
+	{
+		margin: 80px;}
+  h1{
+    text-align: center;}
+</style>
 
 
-    <h1 id="title">TP AW - Formulaire v2</h1>
-    </header>
+</head>
+ <header>
+   <h1 id="title">TP AW - Formulaire v2</h1>
+</header>
+<body>
+  <div class="container">
+    <form>
+      <div class="form-group row">
+        <label for="nom" class="col-sm-2 col-form-label">Nom : </label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="nom" placeholder="Entrer Votre nom" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="prenom" class="col-sm-2 col-form-label">Prenom : </label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="prenom" placeholder="Entrer Votre Prenom" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="date_de_naissance" class="col-sm-2 col-form-label">Date de naissance : </label>
+        <div class="col-sm-10">
+          <input type="date" class="form-control" id="date_de_naissance" placeholder="JJ/MM/AAAA" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="adresse" class="col-sm-2 col-form-label">Adresse : </label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="adresse" placeholder="Entrer Votre Adresse"required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="email" class="col-sm-2 col-form-label">Email : </label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" id="email" placeholder="aaaaa@bbbbb.ccc"required>
+        </div>
+      </div>
+      <button type="button" id="submit" class="btn btn-primary" >Valider</button>
+      </div>
+      
+    </form>
+  </div>
+  
+<!-- Model-->
+  
+  
+  
+  <div class="modal" tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
-
-    <body>            
-     <div class="container">
-
-
-        <form>
-          <div class="form-group row">
-                <label for="nom" class="col-sm-2 col-form-label">Nom : </label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="nom" placeholder="Entrer Votre Nom">
-                </div>
-            </div>
-
-            <div class="form-group row">
-                <label for="prenom" class="col-sm-2 col-form-label">Prenom : </label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="prenom" placeholder="Entrer Votre Prenom">
-                </div>
-            </div>
-           
-            <div class="form-group row">
-                <label for="date_de_naissance" class="col-sm-2 col-form-label">Date de naissance : </label>
-                <div class="col-sm-10">
-                    <input type="date" class="form-control" id="date_de_naissance" placeholder="JJ/MM/AAAA">
-                </div>
-            </div>
-
-
-            <div class="form-group row">
-                <label for="adresse" class="col-sm-2 col-form-label">Adresse : </label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="adresse" placeholder="Entrer Votre Adresse">
-                </div>
-            </div>
-
-            <div class="form-group row">
-                    <label for="email" class="col-sm-2 col-form-label">Email : </label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="email" placeholder="aaaaa@bbbbb.ccc">
-                    </div>
-             </div>
-
-
-             
-
-             <button type="submit" class="btn btn-primary">Valider</button>
-          </form>      
-
-         </div>
-
-
-
-         <div class="modal" tabindex="-1" role="dialog" id="myModal">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Bonjour</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <p>Corps de la modal à modifier après validation du formulaire</p>
-                <div id="googleMap" style="width:100%;height:400px;">
-                <div id="error"></div>
-            </div>
-
-            </div>
-
-              
-              <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Save changes</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
-          </div>
-
-    </body>
+</body>
 </html>
